@@ -2,141 +2,337 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Cat energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cat energy</title>
+    <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
 
-  <body class="page__body">
+  <body class="page-body">
     <header class="main-header">
-      <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image_icon" src="#" width="202" height="59" alt="Cat energy">
-        <img class="logo__image_text" src="#" width="202" height="59" alt="Cat energy">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle button-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link site-list_current" href="index.html" aria-current="page">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="main-header-position">
+        <div class="main-header__logo-box">
+          <a class="main-header__logo-image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/svg+xml" srcset="/images/svg/logo-desktop.svg">
+              <source media="(min-width: 768px)" type="image/svg+xml" srcset="/images/svg/logo-tablet.svg">
+              <img class="main-header__logo-image" src="/images/svg/logo-mobile.svg" width="33" height="38" alt="Логотип сайта о правильном питании для котов.">
+            </picture>
+          </a>
+          <a class="main-header__logo" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/svg+xml" srcset="/images/svg/logo-title-desktop.svg">
+              <source media="(min-width: 768px)" type="image/svg+xml" srcset="/images/svg/logo-title-tablet.svg">
+              <img class="main-header__logo-title" src="/images/svg/logo-title-mobile.svg" width="101" height="18" alt="Сайт о правильном питании для котов.">
+            </picture>
+          </a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle main-nav__toggle--view" type="button">
+            <span class="visually-hidden">
+              Открыть-закрыть меню.
+            </span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item site-list__item--theme">
+                <a class="active-first" href="#">
+                  Главная
+                </a>
+              </li>
+              <li class="site-list__item site-list__item--theme">
+                <a href="./catalog.html">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="site-list__item site-list__item--theme">
+                <a href="./form.html">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
-
     <main class="main-container">
-      <h1 class="visually-hidden">Cat energy</h1>
-
-      <section class="intro">
-        <h2 class="intro__title">Функциональное питание для котов</h2>
-        <p class="intro__slogan">Занялся собой? Займись котом!</p>
-        <a class="intro__link" href="form.html">Подобрать программу</a>
+      <section class="hero">
+        <div class="hero__welcome-box">
+          <div class="hero__welcome">
+            <h1 class="hero__title">
+              Функциональное питание&nbsp;для&nbsp;котов
+            </h1>
+            <p class="hero__slogan">
+              Занялся собой? Займись котом!
+            </p>
+            <div class="link-container">
+              <a class="hero__button button" href="../form.html">
+                Подобрать программу
+              </a>
+            </div>
+            <div class="hero__image-box">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/webp/index-product-desktop.webp 1x, images/webp/index-product-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/webp/index-product-tablet.webp 1x, images/webp/index-product-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="images/webp/index-product.webp 1x, images/webp/index-product@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="/images/index-product-desktop.png 1x, /images/index-product-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="/images/index-product-tablet.png 1x, /images/index-product-tablet@2x.png 2x">
+                <img class="hero__image" src="/images/index-product.png" srcset="/images/index-product@2x.png 2x" width="280" height="270" alt="Логотип продукции «Cat Energy».">
+              </picture>
+            </div>
+          </div>
+        </div>
       </section>
-
-      <section class="nutrition">
-        <div class="nutrition__wrapper">
-          <ul class="nutrition__list">
-            <li class="nutrition__item nutrition__item_weight-loss">
-              <h3 class="nutrition__title">Похудение</h3>
-              <p class="nutrition__desc">Ваш кот весит больше собаки и почти утратил способность
-                лазить по деревьям? Пора на диету! Cat Energy Slim поможет
-                вашему питомцу сбросить лишний вес.</p>
-              <a class="nutrition__link" href="#">Каталог slim</a>
+      <section class="programm">
+        <h2 class="visually-hidden">
+          Подбор индивидуальной программы для вашего питомца.
+        </h2>
+        <div class="programm__variation">
+          <ul class="programm__list">
+            <li class="programm__item programm__item--minus">
+              <h3 class="programm__title">
+                Похудение
+              </h3>
+              <p class="programm__description">
+                Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+              </p>
+              <div class="programm__link-box">
+                <a class="programm__link" href="catalog.html">
+                  каталог slim
+                </a>
+              </div>
             </li>
-            <li class="nutrition__item nutrition__item_weight-gain">
-              <h3 class="nutrition__title">Набор массы</h3>
-              <p class="nutrition__desc">Заработать авторитет среди дворовых котов и даже собак?
-                Серия Cat Energy Pro поможет вашему коту нарастить
-                необходимые мышцы!</p>
-              <a class="nutrition__link" href="#">Каталог pro</a>
+            <li class="programm__item programm__item--plus">
+              <h3 class="programm__title">
+                Набор массы
+              </h3>
+              <p class="programm__description">
+                Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+              </p>
+              <div class="programm__link-box">
+                <a class="programm__link" href="catalog.html">
+                  каталог pro
+                </a>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-
-      <section class="advantages">
-        <div class="advantages__wrapper">
-          <h2 class="advantages__title">Как это работает</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item advantages__item_nutrients">
-              <p class="advantages__desc">Функциональное питание содержит только полезные питательные вещества.</p>
-            </li>
-            <li class="advantages__item advantages__item_powder">
-              <p class="advantages__desc">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            </li>
-            <li class="advantages__item advantages__item_substitute">
-              <p class="advantages__desc">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            </li>
-            <li class="advantages__item advantages__item_pleasure">
-              <p class="advantages__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </li>
-          </ul>
+      <section class="action">
+        <div class="action__wrapper">
+          <h2 class="action__title">
+            Как это работает
+          </h2>
+          <div class="action__container">
+            <ul class="action__list">
+              <li class="action__item">
+                <div class="action__item-image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/webp/action-icon-01-tablet.webp 1x, images/webp/action-icon-01-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/webp/action-icon-01-mobile.webp 1x, images/webp/action-icon-01-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="/images/action-icon-01-tablet.png 1x, /images/action-icon-01-tablet@2x.png 2x">
+                    <img class="action__item-image-view"  src="/images/action-icon-01-mobile.png" srcset="/images/action-icon-01-mobile@2x.png 2x" width="60" height="60" alt="Полезные вещества.">
+                  </picture>
+                </div>
+                <p class="action__item-description">
+                  Функциональное питание содержит только полезные питательные вещества.
+                </p>
+              </li>
+              <li class="action__item">
+                <div class="action__item-image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/webp/action-icon-02-tablet.webp 1x, images/webp/action-icon-02-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/webp/action-icon-02-mobile.webp 1x, images/webp/action-icon-02-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="/images/action-icon-02-tablet.png 1x, /images/action-icon-02-tablet@2x.png 2x">
+                    <img class="action__item-image-view" src="/images/action-icon-02-mobile.png" srcset="/images/action-icon-02-mobile@2x.png 2x" width="60" height="60" alt="Вид выпуска.">
+                  </picture>
+                </div>
+                <p class="action__item-description">
+                  Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+                </p>
+              </li>
+              <li class="action__item">
+                <div class="action__item-image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/webp/action-icon-03-tablet.webp 1x, images/webp/action-icon-03-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/webp/action-icon-03-mobile.webp 1x, images/webp/action-icon-03-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="/images/action-icon-03-tablet.png 1x, /images/action-icon-03-tablet@2x.png 2x">
+                    <img class="action__item-image-view" src="/images/action-icon-03-mobile.png" srcset="/images/action-icon-03-mobile@2x.png 2x" width="60" height="60" alt="Частота приема.">
+                  </picture>
+                </div>
+                <p class="action__item-description">
+                  Замените один-два приема обычной еды на наше функциональное питание.
+                </p>
+              </li>
+              <li class="action__item">
+                <div class="action__item-image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/webp/action-icon-04-tablet.webp 1x, images/webp/action-icon-04-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/webp/action-icon-04-mobile.webp 1x, images/webp/action-icon-04-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="/images/action-icon-04-tablet.png 1x, /images/action-icon-04-tablet@2x.png 2x">
+                    <img class="action__item-image-view" src="/images/action-icon-04-mobile.png" srcset="/images/action-icon-04-mobile@2x.png 2x" width="60" height="60" alt="Достижение результата.">
+                  </picture>
+                </div>
+                <p class="action__item-description">
+                  Уже через месяц наслаждайтесь изменениями к лучшему вашего&#160;питомца!
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-
-      <section class="example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="example__list">
-          <li class="example__item">
-            <h3 class="example__subtitle">5 КГ</h3>
-            <p class="example__text">Снижение веса</p>
-          </li>
-          <li class="example__item">
-            <h3 class="example__subtitle">60 ДНЕЙ</h3>
-            <p class="example__text">Затрачено времени</p>
-          </li>
-        </ul>
-        <!--TODO: Доделать разметку-->
-      </section>
-
-      <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-          <img class="contacts__map" src="#" width="320" height="362" alt="Карта местонахождения офиса">
+      <section class="promo">
+        <div class="promo-container">
+          <h2 class="promo__title">
+            Живой пример
+          </h2>
+          <p class="promo__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&#160;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="promo__stats-box">
+            <div class="promo__stats">
+              <dl class="promo__parametr">
+                <dt class="promo__progress">
+                  5 кг
+                </dt>
+                <dd class="promo__level">
+                  Снижение веса
+                </dd>
+              </dl>
+            </div>
+            <div class="promo__stats">
+              <dl class="promo__parametr">
+                <dt class="promo__progress">
+                  60 дней
+                </dt>
+                <dd class="promo__level">
+                  Затрачено времени
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="promo__price">
+            <div>
+              Затраты на питание:
+            </div>
+            <div>
+              15 000 Руб.
+            </div>
+          </div>
+          <div class="promo__slider">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/webp/promo-slider-tablet.webp 1x, images/webp/promo-slider-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="images/webp/promo-slider-mobile.webp 1x, images/webp/promo-slider-mobile@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="/images/promo-slider-tablet.png 1x, /images/promo-slider-tablet@2x.png 2x">
+              <img class="promo-foto" src="/images/promo-slider-mobile.png" srcset="/images/promo-slider-mobile@2x.png 2x" width="280" height="256" alt="Результат правильного питания котов.">
+            </picture>
+            <a class="promo__link" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="/images/svg/curtain-tablet.svg">
+                <img class="promo__link" src="/images/svg/curtain.svg" width="40" height="256" alt="Результат правильного питания котов.">
+              </picture>
+            </a>
+          </div>
         </div>
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <a class="main-footer__logo logo" href="#">
-          <img class="logo__image logo__image_text" src="#" width="128" height="24" alt="Cat energy">
-        </a>
-        <section class="main-footer__socials socials">
-          <h2 class="visually-hidden">Наши соцсети</h2>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link_vk" href="#">
-                <span class="visually-hidden">VK</span>
+      <section class="main-footer__contacts">
+        <h2 class="visually-hidden">
+          Наш адрес.
+        </h2>
+        <div class="main-footer__wrapper">
+          <div class="main-footer__title-box">
+            <h3 class="main-footer__title">
+              Приглашаем к&nbsp;сотрудничеству дилеров!
+            </h3>
+          </div>
+          <div class="main-footer__description-box">
+            <p class="main-footer__description">
+              ул. Большая Конюшенная, д. 19/8
+            </p>
+            <p class="main-footer__description">
+              Санкт-Петербург
+            </p>
+          </div>
+        </div>
+        <div class="main-footer__map">
+          <h2 class="visually-hidden">
+            Мы на карте города.
+          </h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+            allowfullscreen
+            title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+          </iframe>
+        </div>
+      </section>
+      <section class="main-footer__social">
+        <h2 class="visually-hidden">
+          Мы в социальных сетях.
+        </h2>
+        <div class="main-footer__social-box">
+          <a class="main-footer__social-box-link" href="#">
+            <svg width="128" height="24">
+              <use href="images/sprite.svg#logo-title"></use>
+            </svg>
+            <span class="visually-hidden">
+              Сайт о правильном питании для котов.
+            </span>
+          </a>
+          <ul class="main-footer__list">
+            <li class="main-footer__item">
+              <a class="main-footer__item-link" href="https://vk.com/htmlacademy">
+                <svg width="28" height="22">
+                  <use href="images/sprite.svg#vkontakte"></use>
+                </svg>
+                <span class="visually-hidden">
+                  Мы в Вконтакте.
+                </span>
               </a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link_youtube" href="#">
-                <span class="visually-hidden">Youtube</span>
+            <li class="main-footer__item">
+              <a class="main-footer__item-link" href="https://www.youtube.com/user/htmlacademyru">
+                <svg width="28" height="22">
+                  <use href="images/sprite.svg#youtube"></use>
+                </svg>
+                <span class="visually-hidden">
+                  Мы в Ютубе.
+                </span>
               </a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link_telegram" href="#">
-                <span class="visually-hidden">Telegram</span>
+            <li class="main-footer__item">
+              <a class="main-footer__item-link" href="https://t.me/htmlacademy">
+                <svg width="28" height="22">
+                  <use href="images/sprite.svg#telegram"></use>
+                </svg>
+                <span class="visually-hidden">
+                  Мы в Телеграме.
+                </span>
               </a>
             </li>
           </ul>
-        </section>
-        <a class="copyright" href="#">
-          <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__image" width="27" height="34" src="#" alt="HTML Academy">
-        </a>
-      </div>
+          <div class="main-footer__copyright">
+            <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+            </a>
+            <a class="main-footer__item-link" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg width="27" height="34">
+                <use href="images/sprite.svg#academy-html"></use>
+              </svg>
+              <span class="visually-hidden">
+                Сайт HTML Academy.
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
